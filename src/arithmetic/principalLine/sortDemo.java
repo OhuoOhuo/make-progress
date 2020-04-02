@@ -11,9 +11,84 @@ public class sortDemo {
         //insertSort(arr);
        // System.out.println("排序前："+ Arrays.toString(arr));
 
-        quickSort(arr,0,arr.length-1);
+        //quickSort(arr,0,arr.length-1);
+        margeSort(arr);
         System.out.println("排序前："+ Arrays.toString(arr));
     }
+
+    public static void margeSort(int[] arrs){
+
+        int[] temp = new int[arrs.length];
+
+        split(arrs,0,arrs.length-1,temp);
+
+    }
+
+    private static void split(int[] arrs, int left, int right, int[] temp) {
+        if(left >=right){
+            return;
+        }
+
+        int mid = left + (right -left)/2;
+
+        split(arrs,left,mid,temp);
+
+        split(arrs,mid+1,right,temp);
+
+        merge(arrs,left,mid,right,temp);
+
+    }
+
+    public static void merge(int[] arr, int left, int mid, int right, int[] temp) {
+        int i = left;
+        int j = mid + 1;
+        //temp中的原始下标
+        int t = 0;
+
+        while (i <= mid && j <= right) {
+            //两边数组都没有比较完 继续
+            if (arr[i] < arr[j]) {
+                //左边数组中值更小
+                temp[t] = arr[i];
+                i++;
+            } else {
+                //右边数组中值更小
+                temp[t] = arr[j];
+                j++;
+            }
+            t++;
+        }
+        //有一边已经全部复制到temp中了
+        if (i <= mid) {
+            //左边还没有复制完，将左边全部元素复制到temp中
+            while (i <= mid) {
+                temp[t] = arr[i];
+                i++;
+                t++;
+            }
+        } else if (j <= right) {
+            //右边还没有复制完，将右边全部元素复制到temp中
+            while (j <= right) {
+                temp[t] = arr[j];
+                j++;
+                t++;
+            }
+        }
+        //将temp复制到原arr中
+        t = 0;
+        while (left <= right) {
+            arr[left] = temp[t];
+            left++;
+            t++;
+        }
+    }
+
+
+
+
+
+
+
 
 
 
