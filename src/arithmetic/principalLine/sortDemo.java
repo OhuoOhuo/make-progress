@@ -40,46 +40,40 @@ public class sortDemo {
     }
 
     public static void merge(int[] arr, int left, int mid, int right, int[] temp) {
-        int i = left;
-        int j = mid + 1;
-        //temp中的原始下标
-        int t = 0;
+        int lstart = left;
+        int rstart = mid+1;
+        int tindex = 0;
 
-        while (i <= mid && j <= right) {
-            //两边数组都没有比较完 继续
-            if (arr[i] < arr[j]) {
-                //左边数组中值更小
-                temp[t] = arr[i];
-                i++;
-            } else {
-                //右边数组中值更小
-                temp[t] = arr[j];
-                j++;
+        while (lstart <=mid && rstart <=right){
+
+            if(arr[lstart] < arr[rstart]){
+                temp[tindex] =arr[lstart];
+                lstart++;
+            }else {
+                temp[tindex] = arr[rstart];
+                rstart++;
             }
-            t++;
+            tindex++;
         }
-        //有一边已经全部复制到temp中了
-        if (i <= mid) {
-            //左边还没有复制完，将左边全部元素复制到temp中
-            while (i <= mid) {
-                temp[t] = arr[i];
-                i++;
-                t++;
+
+        if(lstart<=mid){
+            while (lstart <=mid){
+                temp[tindex] = arr[lstart];
+                lstart++;
+                tindex++;
             }
-        } else if (j <= right) {
-            //右边还没有复制完，将右边全部元素复制到temp中
-            while (j <= right) {
-                temp[t] = arr[j];
-                j++;
-                t++;
+        }else {
+            while (rstart<=right){
+                temp[tindex] = arr[rstart];
+                rstart++;
+                tindex++;
             }
         }
-        //将temp复制到原arr中
-        t = 0;
+        tindex = 0;
         while (left <= right) {
-            arr[left] = temp[t];
+            arr[left] = temp[tindex];
             left++;
-            t++;
+            tindex++;
         }
     }
 
