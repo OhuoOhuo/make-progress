@@ -1,5 +1,8 @@
 package arithmetic.principalLine.arithmetic;
 
+/**
+ * 八皇后问题
+ */
 public class EightQueenDemo {
 
 

@@ -1,4 +1,4 @@
-package arithmetic.principalLine;
+package arithmetic.principalLine.dataStructure;
 
 /**
  * Created by cheng on 2020/3/23.
