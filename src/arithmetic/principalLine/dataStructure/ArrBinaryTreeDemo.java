@@ -9,6 +9,7 @@ package arithmetic.principalLine.dataStructure;
  * 第n个元素的父节点为：（n-1）/2
  * 从0开始，n表示二叉树中的第几个元素
  */
+
 public class ArrBinaryTreeDemo {
     public static void main(String[] args){
         int[] arr={1,2,3,4,5,6,7};
