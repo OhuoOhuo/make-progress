@@ -1,15 +1,16 @@
-package arithmetic.principalLine;
+package arithmetic.principalLine.dataStructure;
 
 /**
  * Created by cheng on 2020/3/25.
  */
-public class HeroNode {
+public class HeroNode2 {
 
     public int no;
     public String name;
-    public HeroNode next;
+    public HeroNode2 next;
+    public HeroNode2 pre ;
 
-    public HeroNode(int no,String name){
+    public HeroNode2(int no, String name){
         this.no =no;
         this.name=name;
     }

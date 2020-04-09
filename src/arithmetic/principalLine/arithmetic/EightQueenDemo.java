@@ -1,4 +1,4 @@
-package arithmetic.principalLine;
+package arithmetic.principalLine.arithmetic;
 
 public class EightQueenDemo {
 

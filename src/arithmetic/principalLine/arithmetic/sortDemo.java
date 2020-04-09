@@ -1,7 +1,10 @@
-package arithmetic.principalLine;
+package arithmetic.principalLine.arithmetic;
 
 import java.util.Arrays;
 
+/**
+ * 排序算法
+ */
 public class sortDemo {
 
     public static void main(String[] args){
@@ -16,6 +19,10 @@ public class sortDemo {
         System.out.println("排序前："+ Arrays.toString(arr));
     }
 
+    /**
+     * 归并排序
+     * @param arrs
+     */
     public static void margeSort(int[] arrs){
 
         int[] temp = new int[arrs.length];
@@ -78,14 +85,10 @@ public class sortDemo {
     }
 
 
-
-
-
-
-
-
-
-
+    /**
+     * 插入排序
+     * @param arrs
+     */
     public static void insertSort(int[] arrs){
 
         for (int i = 1; i < arrs.length; i++) {
@@ -103,6 +106,10 @@ public class sortDemo {
         }
     }
 
+    /**
+     * 选择排序
+     * @param arrs
+     */
     public static void choiceSort(int[] arrs){
 
 
@@ -127,6 +134,10 @@ public class sortDemo {
     }
 
 
+    /**
+     * 冒泡排序
+     * @param arrs
+     */
     public static void bobSort(int[] arrs){
 
         boolean flag =true;
@@ -148,11 +159,12 @@ public class sortDemo {
     }
 
 
-
-
-
-
-
+    /**
+     * 快速排序
+     * @param arrs
+     * @param left
+     * @param right
+     */
     public static void quickSort(int[] arrs,int left,int right){
         if(arrs ==null || arrs.length ==1){
             return;

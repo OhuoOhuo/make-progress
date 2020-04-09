@@ -1,4 +1,6 @@
-package arithmetic.principalLine;
+package arithmetic.principalLine.arithmetic;
+
+import arithmetic.principalLine.dataStructure.HeroNode;
 
 /**
  * Created by cheng on 2020/3/26.

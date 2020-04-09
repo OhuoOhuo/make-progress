@@ -1,4 +1,4 @@
-package arithmetic.principalLine;
+package arithmetic.principalLine.dataStructure;
 
 import java.util.Arrays;
 import java.util.LinkedList;
