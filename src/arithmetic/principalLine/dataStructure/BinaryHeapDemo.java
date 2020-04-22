@@ -24,7 +24,7 @@ public class BinaryHeapDemo {
     }
 
     public static void buildHeap(int[] arr){
-        for (int i = (arr.length -2)/2; i >=0 ; i++) {
+        for (int i = (arr.length -2)/2; i >=0 ; i--) {
             downAdjust(arr,i,arr.length);
         }
     }
