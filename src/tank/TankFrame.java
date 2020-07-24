@@ -11,7 +11,8 @@ import java.awt.event.WindowEvent;
  */
 public class TankFrame extends Frame {
 
-    int x = 200, y = 200;
+    Tank myTank =new Tank(200,200,Dir.DOWN);
+
 
     public TankFrame() {
         this.setSize(800, 600);
@@ -31,9 +32,8 @@ public class TankFrame extends Frame {
 
     @Override
     public void paint(Graphics g) {
+        myTank.paint(g);
         //System.out.println("!!!");
-        g.fillRect(x, y, 50, 50);
-        x += 10;
     }
 
     class MyKeyListener extends KeyAdapter {
@@ -61,7 +61,15 @@ public class TankFrame extends Frame {
                 default:
                     break;
             }
+            setMainTankDir();
 
+        }
+
+        private void setMainTankDir() {
+            if (BL) myTank.setDir(Dir.LEFT);
+            if (BU) myTank.setDir(Dir.UP);
+            if (BR) myTank.setDir(Dir.RIGHT);
+            if (BD) myTank.setDir(Dir.DOWN);
         }
 
         @Override
@@ -83,6 +91,7 @@ public class TankFrame extends Frame {
                 default:
                     break;
             }
+            setMainTankDir();
         }
     }
 
