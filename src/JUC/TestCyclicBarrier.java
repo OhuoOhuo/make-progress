@@ -1,7 +1,5 @@
 package JUC;
 
-import com.sun.codemodel.internal.JForEach;
-import com.sun.codemodel.internal.JForLoop;
 
 import java.io.IOException;
 import java.util.concurrent.ArrayBlockingQueue;
