@@ -1,12 +1,13 @@
 package tank.test;
 
-import org.junit.Test;
+
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import static org.junit.Assert.assertNotNull;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * @author ：hyf
@@ -17,7 +18,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class ImageTest {
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void test(){
 
         try {

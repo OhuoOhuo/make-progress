@@ -23,9 +23,7 @@ public class TankFrame extends Frame {
         this.setResizable(false);
         this.setTitle("tank war");
         this.setVisible(true);
-
         this.addKeyListener(new MyKeyListener());
-
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -35,7 +33,6 @@ public class TankFrame extends Frame {
     }
 
     Image offScreeImage = null;
-
     @Override
     public void update(Graphics g) {
         if (offScreeImage == null) {
@@ -53,7 +50,6 @@ public class TankFrame extends Frame {
     @Override
     public void paint(Graphics g) {
         myTank.paint(g);
-        //b.paint(g);
         for (int i = 0; i < bullets.size(); i++) {
             bullets.get(i).paint(g);
         }
