@@ -18,6 +18,7 @@ public class Java8Stream {
         long count1 = strings.stream().filter(StringUtils::isBlank).count();
         System.out.println("java8:空字符串个数："+count1);
 
+
         // 删除空字符串
         List<String> filtered = deleteEmptyStringsUsingJava7(strings);
         System.out.println("java7,筛选后的列表: " + filtered);
