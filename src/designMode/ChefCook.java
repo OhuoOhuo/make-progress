@@ -1,4 +1,4 @@
-package JUC.AQS;
+package designMode;
 
 public class ChefCook extends Cook {
     @Override

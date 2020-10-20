@@ -1,4 +1,4 @@
-package JUC.AQS;
+package designMode;
 
 public abstract class Cook {
     //抽象方法  放油
