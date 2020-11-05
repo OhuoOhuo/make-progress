@@ -2,6 +2,9 @@ package arithmetic.zuo.class07;
 
 import java.util.Stack;
 
+/**
+ * 二叉树遍历的非递归版
+ */
 public class Code02_UnRecursiveTraversalBT {
 
     public static class Node {
