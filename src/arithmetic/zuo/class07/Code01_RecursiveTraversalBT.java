@@ -7,7 +7,7 @@ package arithmetic.zuo.class07;
  * 前序遍历 为第一次到达打印
  * 中序遍历 为第二次到达打印
  * 后序遍历 为第三次到达打印
- *
+ * <p>
  * 遍历都是左到右
  */
 public class Code01_RecursiveTraversalBT {
@@ -31,6 +31,14 @@ public class Code01_RecursiveTraversalBT {
         head.left.right = new Node(5);
         head.right.left = new Node(6);
         head.right.right = new Node(7);
+        head.left.left.left = new Node(8);
+        head.left.left.right = new Node(9);
+        head.left.right.left = new Node(10);
+        head.left.right.right = new Node(11);
+        head.right.left.left = new Node(12);
+        head.right.left.right = new Node(13);
+        head.right.right.left =new Node(14);
+        head.right.right.right =new Node (15);
 
         pre(head);
         System.out.println("========前序遍历");
@@ -42,15 +50,15 @@ public class Code01_RecursiveTraversalBT {
 
     }
 
-    private static void f(Node head){
-        if(head ==null){
+    private static void f(Node head) {
+        if (head == null) {
             return;
         }
-        System.out.print(head.value+ "  ");
+        System.out.print(head.value + "  ");
         f(head.left);
-        System.out.print(head.value+ "  ");
+        System.out.print(head.value + "  ");
         f(head.right);
-        System.out.print(head.value+ "  ");
+        System.out.print(head.value + "  ");
     }
 
 
