@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-* 链表，双向链表的反转
-* */
+ * 链表，双向链表的反转
+ */
 
 public class Code01_ReverseList {
 
@@ -217,7 +217,7 @@ public class Code01_ReverseList {
     }
 
     private static Node reverseLinkedList(Node head) {
-        Node pre = null;
+/*        Node pre = null;
         Node next = null;
         while (head != null) {
             next = head.next;
@@ -225,7 +225,21 @@ public class Code01_ReverseList {
             pre = head;
             head = next;
         }
-        return pre;
+        return pre;*/
+        if (head == null) {
+            return null;
+        }
+        Node n2 = head.next;
+        head.next = null;
+        Node n3 = null;
+        while (n2 != null) {
+            n3 = n2.next;
+            n2.next = head;
+            head = n2;
+            n2 = n3;
+        }
+        return head;
+
     }
 
     private static List<Integer> getLinkedListOriginOrder(Node node1) {

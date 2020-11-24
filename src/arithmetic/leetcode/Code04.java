@@ -29,18 +29,29 @@ import java.util.Set;
 public class Code04 {
 
     public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("bbbbb"));
+
 
     }
 
     public static int lengthOfLongestSubstring(String s) {
         char[] chars = s.toCharArray();
-        HashSet<Character> characters = new HashSet<>();
 
-        List<Set<Character>> setArrayList = new ArrayList<Set<Character>>();
+        int masSize =0;
         for (int i = 0; i <chars.length ; i++) {
-
+            HashSet<Character> set = new HashSet<>();
+            for (int j = i; j <chars.length ; j++) {
+                if(!set.contains(chars[j])){
+                    set.add(chars[j]);
+                }else {
+                    break;
+                }
+            }
+            masSize = Math.max(masSize,set.size());
         }
-        return 0;
+        return masSize;
 
     }
 }
