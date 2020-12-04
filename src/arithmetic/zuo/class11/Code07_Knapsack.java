@@ -14,8 +14,9 @@ public class Code07_Knapsack {
     public static void main(String[] args) {
         int[] weights = {3, 2, 4, 7};
         int[] values = {5, 6, 3, 19};
-        int bag = 11;
+        int bag = 13;
         System.out.println(maxValue(weights, values, bag));
+        System.out.println(dpWay(weights, values, bag));
     }
 
     private static int maxValue(int[] weights, int[] values, int bag) {
@@ -67,6 +68,25 @@ public class Code07_Knapsack {
         int p2Next = process(weights, values, i + 1, restBag - weights[i]);
         int p2 = p2Next == -1 ? -1 : p2Next + values[i];
         return Math.max(p1, p2);
+    }
+
+    private static int dpWay(int[] weights, int[] values, int bag) {
+        int N = weights.length;
+        int[][] dp = new int[N + 1][bag + 1];
+
+        for (int i = N - 1; i >= 0; i--) {
+            for (int rest = 1; rest <= bag; rest++) {
+                int p1 = dp[i + 1][rest];
+                if (rest >= weights[i]) {
+                    dp[i][rest] = Math.max(p1, dp[i + 1][rest - weights[i]]+values[i]);
+                } else {
+                    dp[i][rest] = p1;
+                }
+            }
+        }
+
+
+        return dp[0][bag];
     }
 
 

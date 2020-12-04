@@ -7,7 +7,40 @@ package arithmetic.zuo.class11;
  */
 public class Code06_ConvertToLetterString {
     public static void main(String[] args) {
-        System.out.println(number("11111"));
+        System.out.println(number("1123111"));
+        System.out.println(dpWay("1123111"));
+    }
+
+    private static int dpWay(String s) {
+        if(s==null ||s.length()==0){
+            return 0;
+        }
+        char[] chars = s.toCharArray();
+        int N = chars.length;
+        int[] dp = new int[N+1];
+        dp[N] =1;
+        for (int i = N-1; i >=0 ; i--) {
+            if(chars[i] =='0'){
+                dp[i]=0;
+            }else
+            if(chars[i] =='1'){
+                int res = dp[i+1];
+                if(i+1<chars.length){
+                    res =  res+ dp[i+2];
+                }
+                dp[i] = res;
+            }else
+            if(chars[i] == '2'){
+                int res = dp[i+1];
+                if(i+1<chars.length && '0' <=chars[i+1] && chars[i+1] <='6'){
+                    res =res+dp[i+2];
+                }
+                dp[i] = res;
+            }else {
+                dp[i] = dp[i+1];
+            }
+        }
+        return dp[0];
     }
 
     private static int number(String s) {
