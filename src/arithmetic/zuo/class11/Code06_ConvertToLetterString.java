@@ -7,8 +7,8 @@ package arithmetic.zuo.class11;
  */
 public class Code06_ConvertToLetterString {
     public static void main(String[] args) {
-        System.out.println(number("1123111"));
-        System.out.println(dpWay("1123111"));
+        System.out.println(number("11231101"));
+        System.out.println(dpWay("11231101"));
     }
 
     private static int dpWay(String s) {
