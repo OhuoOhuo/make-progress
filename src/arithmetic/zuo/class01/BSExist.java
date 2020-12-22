@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 /**
- *
+ * 二分查找，一般用于有序的数组，其它情况得关注数据状况，和题目需求
  */
 public class BSExist {
 

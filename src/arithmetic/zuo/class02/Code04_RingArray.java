@@ -1,7 +1,7 @@
 package arithmetic.zuo.class02;
 
 /**
- * 数组实现队列
+ * 数组实现队列  循环使用
  */
 public class Code04_RingArray {
 

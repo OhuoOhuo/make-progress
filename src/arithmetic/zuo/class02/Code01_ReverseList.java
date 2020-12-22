@@ -5,6 +5,11 @@ import java.util.List;
 
 /**
  * 链表，双向链表的反转
+ *
+ * 技巧：如果需要新生产一个指针指向前继 或后继节点，以防找不到当前节点
+ *       快慢指针
+ *       笔试时，利用map
+ *
  */
 
 public class Code01_ReverseList {

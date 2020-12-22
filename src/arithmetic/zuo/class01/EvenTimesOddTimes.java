@@ -2,7 +2,12 @@ package arithmetic.zuo.class01;
 
 /**
  * 位运算
- * 同或 异或
+ * 同或  相同为0，不同为1
+ * <p>
+ * 异或  不同为1，相同为0；理解为2进制的无进位相加
+ * 0^ N =N  N^N=0  所以偶数个N ^ 为0
+ *
+ *
  */
 public class EvenTimesOddTimes {
 
@@ -36,7 +41,6 @@ public class EvenTimesOddTimes {
      *
      * @param args
      */
-
     public static void printOddTimesNum2(int[] args) {
         //找到两种数的^
         int eor = 0;
@@ -76,8 +80,8 @@ public class EvenTimesOddTimes {
         System.out.println(a + " " + b);
 
         int[] arr3 = {1, 2, 3};
-        swap(arr3,0,2);
-        System.out.println(arr3[0] +" "+ arr3[2]);
+        swap(arr3, 0, 2);
+        System.out.println(arr3[0] + " " + arr3[2]);
     }
 
     public static void swap(int[] arr, int i, int j) {
