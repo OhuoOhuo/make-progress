@@ -16,5 +16,16 @@ package arithmetic.leetcode;
  */
 public class 最长的回文子串 {
 
+    public static void main(String[] args) {
+        String str = "";
+        char[] chars = str.toCharArray();
+    }
+
+
+    public int getLastLongNum(char[] chars,int i,int len){
+
+      return len;
+    }
+
 
 }
