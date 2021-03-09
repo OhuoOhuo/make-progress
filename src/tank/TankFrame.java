@@ -14,7 +14,6 @@ public class TankFrame extends Frame {
 
     Tank myTank = new Tank(200, 200, Dir.DOWN, this);
     java.util.List<Bullet> bullets = new ArrayList<>();
-    Bullet b = new Bullet(300, 300, Dir.DOWN);
 
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
@@ -24,7 +23,7 @@ public class TankFrame extends Frame {
         this.setTitle("tank war");
         this.setVisible(true);
         this.addKeyListener(new MyKeyListener());
-        addWindowListener(new WindowAdapter() {
+        this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
