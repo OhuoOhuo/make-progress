@@ -7,13 +7,18 @@ public class ArrayDemo1 {
      */
 
     public static void main(String[] args){
-        int[][] matrix = {
+        System.out.println(0|0);
+        System.out.println(1|0);
+        System.out.println(1|1);
+
+        System.out.println(0&0);
+/*        int[][] matrix = {
                 {1, 2, 8, 9},
                 {2, 4, 9, 12},
                 {4, 7, 10, 13},
                 {6, 8, 11, 15}
         };
-        System.out.println(find(matrix,3));
+        System.out.println(find(matrix,3));*/
     }
 
     private static boolean find(int[][] arr ,int i){
