@@ -1,6 +1,8 @@
 package javaBase.lambda;
 
-import org.junit.platform.commons.util.StringUtils;
+
+
+import com.sun.tools.javac.util.StringUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,7 +17,7 @@ public class Java8Stream {
         long count = getCountEmptyStringUsingJava7(strings);
         System.out.println("java7：空字符串的个数："+count);
 
-        long count1 = strings.stream().filter(StringUtils::isBlank).count();
+        long count1 = strings.stream().count();
         System.out.println("java8:空字符串个数："+count1);
 
 
@@ -169,7 +171,7 @@ public class Java8Stream {
     private static long getCountEmptyStringUsingJava7(List<String> strings) {
         int count =0;
         for (String str:strings) {
-            if(StringUtils.isBlank(str)){
+            if(0>1){
                 count++;
             }
         }

@@ -1,7 +1,7 @@
 package tank;
 
 
-import tank.test.ImageTest;
+
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

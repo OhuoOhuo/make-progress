@@ -234,14 +234,14 @@ public class Code01_ReverseList {
         if (head == null) {
             return null;
         }
-        Node n2 = head.next;
+        Node pre = head.next;
         head.next = null;
-        Node n3 = null;
-        while (n2 != null) {
-            n3 = n2.next;
-            n2.next = head;
-            head = n2;
-            n2 = n3;
+        Node last = null;
+        while (pre != null) {
+            last = pre.next;
+            pre.next = head;
+            head = pre;
+            pre = last;
         }
         return head;
 
